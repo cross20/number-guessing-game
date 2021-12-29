@@ -61,6 +61,8 @@
       let guessCount = 1;
       let resetButton;
 
+      guessField.focus();
+
       function checkGuess() {
         const userGuess = Number(guessField.value);
 
@@ -71,7 +73,7 @@
             guesses.textContent = 'Previous guesses:';
           }
           guesses.textContent += ' ' + userGuess;
-          
+
           if (userGuess === randomNumber) {
             lastResult.textContent = 'Congratulations! You got it right!';
             lastResult.style.backgroundColor = 'green';
